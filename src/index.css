@@ -1,0 +1,158 @@
+/* For Main Parts of the app */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #282c34;
+  color: white;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #61dafb;
+  border: none;
+  cursor: pointer;
+}
+
+/* For the projects section */
+
+.projects {
+  padding: 50px;
+  text-align: center;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* For the Skills Section */
+
+.skills {
+  padding: 50px;
+  text-align: center;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills li {
+  background-color: #61dafb;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+/* For the About section */
+.about {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px; /* Constrain width for readability */
+  margin: 0 auto; /* Center the container */
+  animation: fadeIn 1s ease-in;
+}
+
+.about h2 {
+  font-size: 2.5rem; /* Large, bold heading */
+  font-weight: 700;
+  color: #282c34; /* Dark color for contrast */
+  margin-bottom: 20px;
+}
+
+.about-content {
+  font-size: 1.1rem; /* Readable paragraph size */
+  line-height: 1.6; /* Improved readability */
+  color: #333; /* Slightly softer than black */
+  margin-bottom: 30px;
+}
+
+.about-content p {
+  margin: 15px 0; /* Space between paragraphs */
+}
+
+.about-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #61dafb; /* React-inspired blue */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.about-button:hover {
+  background-color: #21a1f1; /* Darker blue on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.about-button:active {
+  transform: translateY(0); /* Reset on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 15px; /* Less padding on mobile */
+  }
+
+  .about h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .about-content {
+    font-size: 1rem; /* Slightly smaller text */
+  }
+
+  .about-container {
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 0 10px;
+  }
+}
+  
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
