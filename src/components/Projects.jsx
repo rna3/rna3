@@ -1,5 +1,6 @@
 import ProjectCard from './ProjectCard';
 import React from 'react';
+import NewslyImage from '../assets/Newsly Favorites.png'
 
 const projectsData = [
   {
@@ -7,7 +8,8 @@ const projectsData = [
     description: 'A web app built during my bootcamp...',
     tech: ['React', 'Node'],
     github: 'https://github.com/rna3',
-    demo: 'live-link',
+    demo: 'https://newsly-frontend-fu8j.onrender.com/',
+    image: NewslyImage
   },
   {
     title: 'FoodFriends',

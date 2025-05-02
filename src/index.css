@@ -33,53 +33,6 @@ button {
   cursor: pointer;
 }
 
-/* For the projects section */
-
-.projects {
-  padding: 50px;
-  text-align: center;
-}
-
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.project-card {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  transition: transform 0.2s;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-/* For the Skills Section */
-
-.skills {
-  padding: 50px;
-  text-align: center;
-}
-
-.skills ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.skills li {
-  background-color: #61dafb;
-  padding: 10px 20px;
-  border-radius: 20px;
-  color: white;
-}
-
 /* For the About section */
 .about {
   padding: 60px 20px;
@@ -100,11 +53,23 @@ button {
   margin-bottom: 20px;
 }
 
+.about-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
 .about-content {
+  padding: 12px;
   font-size: 1.1rem; /* Readable paragraph size */
   line-height: 1.6; /* Improved readability */
   color: #333; /* Slightly softer than black */
+  border: 1px solid #ddd;
+  border-radius: 8px;
   margin-bottom: 30px;
+  text-align: left;
 }
 
 .about-content p {
@@ -132,7 +97,7 @@ button {
   transform: translateY(0); /* Reset on click */
 }
 
-/* Responsive Design */
+/* Responsive Design for About section*/
 @media (max-width: 768px) {
   .about {
     padding: 40px 15px; /* Less padding on mobile */
@@ -150,9 +115,317 @@ button {
     max-width: 100%; /* Full width on smaller screens */
     padding: 0 10px;
   }
+  }
+
+/* For the projects section */
+
+.projects {
+  padding: 50px;
+  text-align: center;
 }
-  
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  position: relative; /* For overlay positioning */
+  overflow: hidden; /* Ensure content stays within rounded corners */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  transition: background-color 0.3s; /* Smooth overlay transition */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.project-card:hover::before {
+  background-color: rgba(0, 0, 0, 0.3); /* Lighten overlay on hover */
+}
+
+.project-card-content {
+  position: relative; /* Ensure content is above overlay */
+  padding: 20px;
+  color: #fff; /* White text for contrast */
+  text-align: left; /* Align text for readability */
+}
+
+.project-card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Improve readability */
+}
+
+.project-card-content p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.project-card-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-card-links a {
+  color: #61dafb; /* React-blue links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.project-card-links a:hover {
+  color: #21a1f1; /* Darker blue on hover */
+}
+
+/* Responsive Design for Projects */
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 15px;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .project-card-content {
+    padding: 15px;
+  }
+
+  .project-card-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For the Skills Section */
+
+.skills {
+  padding: 50px;
+  text-align: center;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills li {
+  background-color: #61dafb;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+/* For the Contact section */
+.contact {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Light background, matches About */
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px; /* Constrain width, matches About */
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in; /* Reuse fade-in animation */
+}
+
+.contact h2 {
+  font-size: 2.5rem; /* Matches About heading */
+  font-weight: 700;
+  color: #282c34; /* Dark color for contrast */
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1rem; /* Readable paragraph size */
+  line-height: 1.6;
+  color: #333;literal; /* Slightly softer than black */
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  background-color: #61dafb; /* React-blue */
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-button:hover {
+  background-color: #21a1f1; /* Darker blue on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.contact-button:active {
+  transform: translateY(0);
+}
+
+/* Optional: Differentiate buttons by platform */
+.contact-button.linkedin {
+  background-color: #0077b5; /* LinkedIn blue */
+}
+
+.contact-button.linkedin:hover {
+  background-color: #005f93;
+}
+
+.contact-button.github {
+  background-color: #333; /* GitHub dark gray */
+}
+
+.contact-button.github:hover {
+  background-color: #1a1a1a;
+}
+
+.contact-button.gmail {
+  background-color: #d93025; /* Gmail red */
+}
+
+.contact-button.gmail:hover {
+  background-color: #b5261e;
+}
+
+/* Responsive Design for Contact */
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+
+  .contact-links {
+    flex-direction: column; /* Stack buttons on mobile */
+    gap: 15px;
+  }
+
+  .contact-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* For the Footer section */
+.footer {
+  padding: 40px 20px;
+  background-color: #282c34; /* Dark background for modern look */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in; /* Reuse About's fade-in animation */
+}
+
+.footer-nav {
+  margin-bottom: 20px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #61dafb; /* React-blue on hover */
+}
+
+.footer-social {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  color: #61dafb; /* React-blue on hover */
+  transform: scale(1.2); /* Slight scale-up effect */
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-copyright p {
+  margin: 0;
+}
+
+/* Responsive Design for Footer */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-nav a {
+    display: block;
+    margin: 10px 0; /* Stack links vertically on mobile */
+  }
+
+  .footer-social {
+    gap: 15px;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
