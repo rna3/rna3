@@ -1,6 +1,7 @@
 import ProjectCard from './ProjectCard';
 import React from 'react';
 import NewslyImage from '../assets/Newsly Favorites.png'
+import FoodFriendImage from '../assets/FoodFriendsHP.png'
 
 const projectsData = [
   {
@@ -16,15 +17,16 @@ const projectsData = [
     description: 'A web app built during my bootcamp...',
     tech: ['Python', 'Flask'],
     github: 'https://github.com/rna3',
-    demo: 'live-link',
+    demo: 'https://foodfriends.onrender.com/',
+    image: FoodFriendImage
   },
-  {
-    title: 'Jobly',
-    description: 'A web app built during my bootcamp...',
-    tech: ['React', 'Node','Express'],
-    github: 'https://github.com/rna3',
-    demo: 'live-link',
-  },
+  // {
+  //   title: 'Jobly',
+  //   description: 'A web app built during my bootcamp...',
+  //   tech: ['React', 'Node','Express'],
+  //   github: 'https://github.com/rna3',
+  //   demo: 'live-link',
+  // },
   // Add more projects here
 ];
 
