@@ -20,12 +20,6 @@ nav a {
   text-decoration: none;
 }
 
-.hero {
-  text-align: center;
-  padding: 50px;
-  background-color: #f4f4f4;
-}
-
 button {
   padding: 10px 20px;
   background-color: #61dafb;
@@ -33,9 +27,18 @@ button {
   cursor: pointer;
 }
 
+/* For the Hero Section */
+
+.hero {
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
 /* For the About section */
+
 .about {
-  padding: 60px 20px;
+  padding: 20px;
   background-color: #f9f9f9; /* Light background for contrast */
   text-align: center;
 }

@@ -6,7 +6,7 @@ import FoodFriendImage from '../assets/FoodFriendsHP.png'
 const projectsData = [
   {
     title: 'Newsly',
-    description: 'A web app built during my bootcamp...',
+    description: 'A News search and discussion app',
     tech: ['React', 'Node'],
     github: 'https://github.com/rna3',
     demo: 'https://newsly-frontend-fu8j.onrender.com/',
@@ -14,7 +14,7 @@ const projectsData = [
   },
   {
     title: 'FoodFriends',
-    description: 'A web app built during my bootcamp...',
+    description: 'A recipe search and social site',
     tech: ['Python', 'Flask'],
     github: 'https://github.com/rna3',
     demo: 'https://foodfriends.onrender.com/',
