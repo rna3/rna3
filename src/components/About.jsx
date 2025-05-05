@@ -1,4 +1,5 @@
 import React from 'react';
+import ryoImage from '../assets/Ghibli Ryo n Subi.png'
 
 function About() {
   return (
@@ -6,7 +7,7 @@ function About() {
       <div className="about-container">
         <h2>About Me</h2>
         <div className="about-flex"></div>
-        <img src="src/assets/Ghibli Ryo n Subi.png" alt="Picture of Richard" className="about-image" />
+        <img src={ryoImage} alt="Picture of Richard" className="about-image" />
         <div className="about-content">
           <p>
             I’m a versatile software engineer, recently graduated from Springboard’s 700+ hour bootcamp, where I mastered full-stack development using JavaScript, Python, React, Node.js, Flask, SQL, and more. My portfolio includes projects like “FoodFriends” (a Flask/PostgreSQL social platform) and “Newsly” (a React/Node.js app), both reviewed by industry experts, plus mini-projects like Connect Four and an Express Calculator.
